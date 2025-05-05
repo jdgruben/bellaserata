@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Serrata</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Audio Player (caché) -->
+    <audio id="ambientSound" autoplay loop preload="auto">
+        <source src="assets/ambient.mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+    
+    <!-- Bouton pour activer/désactiver le son -->
+    <button id="toggleAudio" class="audio-toggle">
+        <i class="fas fa-volume-mute"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">La Bella Serrata</div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#top">Accueil</a></li>
+                <li><a href="#invitation">Invitation</a></li>
+                <li><a href="#rsvp">Réponse</a></li>
+                <li><a href="#adresse">Adresse</a></li>
+                <li><a href="#dress-code">Dress Code</a></li>
+                <li><a href="#photos">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="top" class="hero">
+        <div class="hero-content">
+            <h1>La Bella Serrata</h1>
+            <div class="names">
+                <span>Alicia</span>
+                <span>Rosalie</span>
+                <span>Zoé</span>
+                <span>Pipaye</span>
+            </div>
+            <div class="date">02/08/2025</div>
+            <p class="tagline">Une soirée d'été à l'italienne</p>
+        </div>
+    </section>
+
+    <!-- Invitation Section -->
+    <section id="invitation" class="section">
+        <div class="container">
+            <h2>Invitation</h2>
+            <div class="invitation-content">
+                <p>M. et Mme … sont invités par Alicia, Rosalie et Zoé le samedi 2 août 2025 à 19h30.</p>
+                <p>Dîner à 21h précises à la ferme de Bertinchamps</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="section">
+        <div class="container">
+            <h2>Réponse</h2>
+            <form id="rsvpForm" class="rsvp-form">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Présence</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="presence" value="oui" required>
+                            Oui
+                        </label>
+                        <label>
+                            <input type="radio" name="presence" value="non">
+                            Non
+                        </label>
+                        <label>
+                            <input type="radio" name="presence" value="23h">
+                            23h
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Envoyer</button>
+            </form>
+            <div id="confirmation" class="confirmation-message" style="display: none;">
+                Merci pour votre réponse !
+            </div>
+        </div>
+    </section>
+
+    <!-- Adresse Section -->
+    <section id="adresse" class="section">
+        <div class="container">
+            <h2>Adresse et lien vers Google Maps</h2>
+            <div class="map-section">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.1234567890123!2d4.1234567890123!3d50.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA3JzM0LjQiTiA0wrAwNyczNC40IkU!5e0!3m2!1sfr!2sbe!4v1234567890123!5m2!1sfr!2sbe"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="map-info">
+                    <p>Ferme de Bertinchamps</p>
+                    <a href="https://maps.google.com" class="map-link" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i> Voir sur Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section id="dress-code" class="section">
+        <div class="container">
+            <h2>Dress Code</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/gallery/1963 04 Seventeen-56 Gay Gibson Iris Bianchi.jpg" alt="Style vintage">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/70s kid!_ Photo.jpg" alt="Style années 70">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Blog.jpg" alt="Style blog">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Dolce and Gabbana Summer.jpg" alt="Style Dolce & Gabbana">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Italian Gentleman.jpg" alt="Gentleman italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Italian Summer Outfits You Need To Pack in 2024.jpg" alt="Style italien d'été">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/La Dolce Vita _ Summer Outfit Inspiration.jpg" alt="Inspiration Dolce Vita">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Lemons, Sicily.jpg" alt="Citrons de Sicile">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Ortigia_ It's Sicily, But It's Not - Italy Segreta.jpg" alt="Ortigia">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Portofino.jpg" alt="Portofino">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Susan Shaw _ La Dolce Vita Collection.jpg" alt="Collection Dolce Vita">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/The Gloss Menagerie ca_ 80s,90s.jpg" alt="Style années 80-90">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/The Vogue Guide To Capri_ Where To Eat, Sleep And Sunbathe On The Mystical Island.jpg" alt="Guide Capri">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/These 12 Items Will Bring Joy To Your Summer Days Ahead.jpg" alt="Style été">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Things to Do in Amalfi Coast, Italy.jpg" alt="Côte Amalfitaine">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Trend Alert_ Italian Silk Scarves _ Currently Popular.jpg" alt="Foulards italiens">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/Vintage editorial_ Ana Beatriz Barros para Elle US novembro 2000 - Living Gazette.jpg" alt="Éditorial vintage">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (10).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (11).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (12).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (13).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (14).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (15).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (2) copie.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (2).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (3) copie.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (3).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (4) copie.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (4).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (5) copie.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (5).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (6) copie 2.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (6) copie.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (6).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (7).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (8).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/_ (9).jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/capri style  BEATRICE BORROMEO.jpg" alt="Style Capri">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/dolce and gabbana s_s 2013.jpg" alt="Dolce & Gabbana">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/mercato (1).jpg" alt="Marché italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/still in a summer state of mind.jpg" alt="Style été">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/téléchargement.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/vintage lilly pulitzer ad - vogue 1973.jpg" alt="Publicité vintage">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/‹𝟹 copie.jpg" alt="Style italien">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/‹𝟹.jpg" alt="Style italien">
+                </div>
+            </div>
+            <p class="dress-code-quote">"Savoir s'éteindre..."</p>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos" class="section">
+        <div class="container">
+            <h2>Photos</h2>
+            <p class="photos-message">Les photos seront disponibles après la soirée.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 
